@@ -1,0 +1,16 @@
+npm init
+
+npm i --save-dev webpack
+npm i --save-dev webpack-dev-server
+npm i --save- json-loader
+
+// 리액트 구성
+npm i --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
+npm i --save react react-dom
+
+npm i --save-dev style-loader css-loader
+npm i --save-dev postcss-loader autoprefixer
+
+npm i --save-dev html-webpack-plugin
+npm i --save-dev babel-plugin-react-transform react-transform-hmr
+npm i --save-dev extract-text-webpack-plugin

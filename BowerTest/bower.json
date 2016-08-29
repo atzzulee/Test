@@ -1,0 +1,23 @@
+{
+  "name": "zdfs",
+  "description": "sdf",
+  "main": "sdf",
+  "authors": [
+    "df"
+  ],
+  "license": "d",
+  "keywords": [
+    "sdf"
+  ],
+  "homepage": "d",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7"
+  },
+  "install": {
+    "path": {
+      "css": "static/css",
+      "js": "static/js"
+    }
+  }
+}
