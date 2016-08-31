@@ -1,0 +1,25 @@
+mvc로 페이지 작성시 부분뷰를 이용할때
+몇가지 방법이 있습니다.
+@Html.Partial("viewname")
+@Html.RenderPartial("viewname")
+주로 사용하는 뒤 2가지 방법에는 차이가 있습니다.
+ 
+참고 LINK와 같이 설명을 드리겠습니다.
+ 
+1.	http://stackoverflow.com/questions/4501736/razor-html-partial-vs-renderpage 
+
+→ 주의할 내용은 Partial은 MvcHtmlString 형식의 결과값을 리턴 받고 RenderPartial은 Void로 결과값이 없습니다
+단순한 차이지만 메모리가 할당되는 부분이 있어서 결과값이 필요없는 경우는 RenderPartial을 권장합니다.
+2.	http://apmblog.dynatrace.com/2009/04/22/asp-net-mvc-hidden-performance-problem-with-htmlhelper-renderpartial-functions-problem-resolved/ 
+
+→ RenderPartial 에서 viewname을 full path로 적어주는게 lookup view file 퍼포먼스에 좋다고 합니다.(회사에서 링크가 연결이 안되네요; 
+3.	추가적으로 RenderAction과 RenderPage가 있습니다.
+Html.RenderAction과 Html.Action의 차이점은 Partial과 RenderPartion의 차이와 같습니다. 
+그리고 RenderPage가 있습니다. 
+RenderPartial가 동일하나 작성할때 더 편한거 같아서 최종적으로 추천드립니다.
+
+예를 들어 아래 샘플코드 보시면
+같은 내용이지만 RenderPage가 작성이 더 쉽습니다. ^^
+
+@RenderPage("~/Views/Shared/_Footer.cshtml")
+@{Html.RenderPartial("~/Views/Shared/_Footer.cshtml");}
